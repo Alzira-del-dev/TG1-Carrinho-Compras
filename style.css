@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+h1::before {
+  font-size: 2rem;
+}
+
+h1::after {
+  font-size: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #e67e22;
+}
+
+h2 i {
+  font-size: 1.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #e67e22;
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+}
+
+/* BOTÕES UNIFORMES */
+button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(105%);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Botão Adicionar Produto */
+#btnAdicionarProduto {
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+  color: white;
+  width: 100%;
+  font-weight: bold;
+}
+
+#btnAdicionarProduto::before {
+  font-size: 14px;
+}
+
+/* Botão Comprar */
+.btn-comprar {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  width: auto;
+  padding: 8px 20px;
+  font-weight: 600;
+}
+
+.btn-comprar::before {
+  margin-right: 5px;
+}
+
+/* Botão Finalizar Compra */
+#btnEncerrarCompra {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  color: white;
+  width: 100%;
+  font-weight: bold;
+}
+
+#btnEncerrarCompra::before {
+  content: "✅";
+  margin-right: 8px;
+}
+
+.produto-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+
+.produto-item:hover {
+  background: #fef9f2;
+  border-radius: 12px;
+}
+
+.produto-item:last-child {
+  border-bottom: none;
+}
+
+.produto-info {
+  flex: 1;
+}
+
+.produto-info strong {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.produto-preco {
+  color: #e67e22;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: #fff3e0;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.carrinho-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #fffaf5;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+.carrinho-item:hover {
+  background: #fff5ea;
+  transform: translateX(5px);
+}
+
+.carrinho-item span:first-child {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.carrinho-item .produto-preco {
+  background: none;
+  padding: 0;
+}
+
+.totais {
+  background: linear-gradient(135deg, #fff9f0, #fff5eb);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #ffe0c0;
+}
+
+.totais p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totais p:first-child {
+  font-size: 1rem;
+  color: #555;
+}
+
+.totais p:last-child {
+  border-top: 2px solid #e67e22;
+  padding-top: 12px;
+  margin-top: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e67e22;
+}
+
+.totais p:last-child span:last-child {
+  font-size: 1.5rem;
+}
+
+.vazio {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-style: italic;
+  background: #fafafa;
+  border-radius: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .produto-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .btn-comprar {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .carrinho-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Animações suaves */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.produto-item,
+.carrinho-item {
+  animation: fadeIn 0.3s ease;
+}
